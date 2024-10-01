@@ -1,0 +1,27 @@
+# Função para gerar um plano de treino ideal
+def gerar_plano_treino(biotipo, dias, tipo_exercicio):
+    # Exemplo de lógica para o plano de treino
+    treino = f"Plano de Treino para Biotipo: {biotipo}\n"
+
+    if dias == 1:
+        treino += "Tipo de Treino: Full Body\n"
+    elif dias == 3:
+        treino += "Tipo de Treino: ABC\n"
+    elif dias == 5:
+        treino += "Tipo de Treino: ABCDE\n"
+    else:
+        treino += "Número de dias inválido.\n"
+
+    treino += f"Tipo de Exercício Preferido: {tipo_exercicio}\n"
+    return treino
+
+# Coleta de dados do usuário
+biotipo = input("Informe seu biotipo (Ectomorfo, Mesomorfo, Endomorfo): ")
+dias = int(input("Quantos dias por semana você pode treinar? (1, 3 ou 5): "))
+tipo_exercicio = input("Quais tipos de exercícios você prefere? (Funcional, Maquinário, Peso Livre, Cardio, HIIT): ")
+
+# Gera o plano de treino
+plano_treino = gerar_plano_treino(biotipo, dias, tipo_exercicio)
+
+# Exibe o plano de treino
+print(plano_treino)
